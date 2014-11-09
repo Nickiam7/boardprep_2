@@ -64,6 +64,16 @@ body {
     border-color: #1c1f25;
 }
 
+.btn-shuffle:focus, 
+.btn-shuffle.focus, 
+.btn-shuffle:active, 
+.btn-shuffle.active, 
+.open > .dropdown-toggle.btn-shuffle {
+	border-radius: 2px;
+	margin-right: 25px;
+    border-color: #1c1f25;
+}
+
 .form_top {
 	margin-top: 25px;
 }
@@ -71,6 +81,13 @@ body {
 .form-control {
 	border-radius: 2px;
 }
+
+.form-control:focus {
+	border-color: #adb1b9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+}
+
 
 
 

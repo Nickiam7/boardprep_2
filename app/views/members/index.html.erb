@@ -1,6 +1,14 @@
-
+<div id="Container">
 <% @members.each do |member| %>
-	<%= image_tag @member.photo.url %>
+	<div class="mix <%= "#{member.sort}" %>" style="margin:10px; cursor:pointer;">
+		<%= image_tag member.photo.url, class: "poop img-rounded thumbnail", data: { toggle: "popover", placement: "top", content: "#{member.title}", title: "#{member.name}"} %>
+		<div class="btn-group">
+			<%= link_to "Edit", edit_member_path(member), class: "btn btn-default btn-sm" %>
+			<%= link_to "Delete", member, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-sm" %>
+		</div>
+	</div>
 <% end %>
-
-<%= link_to "Create New Member", new_member_path, class: "btn btn-success" %>
+<hr>
+<div class="row">
+	<%= link_to "Create New Member", new_member_path, class: "btn btn-success" %>
+</div>

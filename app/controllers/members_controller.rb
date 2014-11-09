@@ -22,7 +22,7 @@ class MembersController < ApplicationController
 	def create
 		@member = Member.new(member_params)
 		if @member.save
-			redirect_to @member
+			redirect_to list_path
 			flash[:success] = "New nember has successfully been created."
 		else
 			render 'new'
@@ -31,7 +31,7 @@ class MembersController < ApplicationController
 
 	def update
 		if @member.update(member_params)
-			redirect_to @member
+			redirect_to list_path
 			flash[:success] = "Member has been successully updated."
 		else
 			render 'update'
@@ -39,8 +39,8 @@ class MembersController < ApplicationController
 	end
 
 	def destroy
-		member.destroy
-		redirect_to members_url
+		@member.destroy
+		redirect_to list_path
 	end
 
 	private 

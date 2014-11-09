@@ -10,7 +10,9 @@
 
 <script>
 	$(function(){
+		$('#Container').mixItUp(); 
 		$('.pop').tooltip();
+			$('.poop').popover();
 	});
 </script>	
 
@@ -22,13 +24,13 @@
 		<div class='container'>
 			<h1 class="pull-left hidden-xs">Board of Governors Exam</h1>
 			<div class="pull-right">
-				<button type="button" class="btn btn-default pop shuffle" data-toggle="tooltip" data-placement="left" title="Shuffle"><span class="glyphicon glyphicon-refresh"></span></button>
+				<button type="button" class="btn btn-default pop shuffle filter sort" data-sort="random" data-toggle="tooltip" data-placement="left" title="Shuffle"><span class="glyphicon glyphicon-refresh"></span></button>
 				<div class="btn-group" style="margin-right:25px;">
 					<button type="button" class="btn btn-dark active">Color</button>
 					<button type="button" class="btn btn-dark">Grey</button>
 				</div>
 				<div class="btn-group">
-					<button type="button" class="btn btn-dark">All</button>
+					<button type="button" class="btn btn-dark active">All</button>
 					<button type="button" class="btn btn-dark">Chairman</button>
 					<button type="button" class="btn btn-dark">Board</button>
 				</div>
