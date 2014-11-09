@@ -1,0 +1,87 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+	background-color: #f9f9f9;
+	color: #2d3545
+}
+
+.blue-head {
+	background: #1e57ac;
+	margin-bottom:25px;
+}
+
+.blue-head img {
+	margin: 30px 0px;
+}
+
+.light-blue-header {
+	background: #2a66c0;
+	border: 1px solid #0e4598;
+}
+
+.light-blue-header h1 {
+	color: #ffffff;
+	margin-top: 10px;
+}
+
+.btn {
+	border-radius: 2px;
+}
+
+.btn-dark {
+	color: #adb1b9;
+	background-color: #2d3545;
+	border-color: #1c1f25;
+	margin: 15px 0;
+}
+
+.btn-dark:hover {
+	color: #adb1b9;
+	background-color: #242b39;
+	border-color: #1c1f25;
+	margin: 15px 0;
+}
+
+
+.btn-dark:focus, 
+.btn-dark.focus, 
+.btn-dark:active, 
+.btn-dark.active, 
+.open > .dropdown-toggle.btn-dark {
+	background-color: #0b0d12;
+    border-color: #1c1f25;
+    color: #fff;
+}
+
+.shuffle {
+	border-radius: 2px;
+	margin-right: 25px;
+    border-color: #1c1f25;
+}
+
+.shuffle:hover {
+    border-color: #1c1f25;
+}
+
+.form_top {
+	margin-top: 25px;
+}
+
+.form-control {
+	border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

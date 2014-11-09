@@ -1,0 +1,6 @@
+
+<% @members.each do |member| %>
+	<%= image_tag @member.photo.url %>
+<% end %>
+
+<%= link_to "Create New Member", new_member_path, class: "btn btn-success" %>

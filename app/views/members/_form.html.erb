@@ -1,0 +1,43 @@
+
+<div class="row form_top">
+	<div class="col-md-6 col-md-offset-3">
+		<%= form_for @member, :url => members_path, :html => { :multipart => true } do |f| %>
+			<% if @member.errors.any? %>
+			  <div id="error_explanation">
+			    <div class="alert alert-danger">
+			      <h2>The form contains <%= pluralize(@member.errors.count, "error") %>.</h2>
+				    <ul>
+					    <% @member.errors.full_messages.each do |msg| %>
+					      <li><%= msg %></li>
+					    <% end %>
+				    </ul>
+				</div>
+			  </div>
+			<% end %>
+
+			<form role="form">
+				<div class="form-group">
+					<%= f.label :name %>
+					<%= f.text_field :name, placeholder: "Enter Full Name and Credentials", class: "form-control" %>
+				</div>
+
+				<div class="form-group">
+					<%= f.label :title %>
+					<%= f.text_field :title, placeholder: "Enter ACHE Title", class: "form-control" %>
+				</div>
+
+				<div class="form-group">
+					<%= f.label :sort, "Sort by" %>
+					<%= f.select(:sort, options_for_select([["Chairman", "chair"],["Governors", "gov"]])) %>
+				<div class="form-group pull-right">
+					<%= f.file_field :photo, class: "btn btn-default" %>
+				</div><br><br>
+					<hr>
+				<div class="form-group">
+					<%= f.submit class:"btn btn-success" %> <%= link_to "Cancel", root_path, class: "btn btn-default btn-sm" %>
+				</div>
+			</form>
+		
+		<% end %>
+	</div>
+</div>
