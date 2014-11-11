@@ -9,6 +9,7 @@ gem 'coffee-rails', '~> 4.0.0'
 #jQuery and TurboLinks
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'jquery-turbolinks'
 
 gem "paperclip", "~> 4.2"
 

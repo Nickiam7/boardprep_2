@@ -8,7 +8,7 @@ body {
 
 .blue-head {
 	background: #1e57ac;
-	margin-bottom:25px;
+	margin-bottom: 70px;
 }
 
 .blue-head img {
@@ -84,8 +84,19 @@ body {
 
 .form-control:focus {
 	border-color: #adb1b9;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
     outline: 0 none;
+    box-shadow: none;
+}
+
+#sorter.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:10;
+}
+
+ #container .mix {
+	display: none;
 }
 
 
