@@ -1,5 +1,7 @@
 class MembersController < ApplicationController
 	before_action :set_member, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_admin!, except: [:index]
+
 
 	def index
 		@members = Member.all
@@ -23,7 +25,7 @@ class MembersController < ApplicationController
 		@member = Member.new(member_params)
 		if @member.save
 			redirect_to list_path
-			flash[:success] = "New nember has successfully been created."
+			flash[:success] = "New member, #{@member.name} has been successfully created."
 		else
 			render 'new'
 		end

@@ -1,37 +1,38 @@
-<h1>List of Members</h1>
-
+<h1>Members List</h1>
 <div class="row">
 	<div class="col-md-9">
 		<div class="panel panel-default">
-			<table class="table table-striped">	
-					<tr>
-						<th>Photo</th>
-						<th>Name</th>
-						<th>Title</th>
-						<th>Sort</th>
-						<th></th>
-					</tr>
-				<tbody>
-					<% @members.each do |member| %>
-						<tr valign="center">
-							<td><%= image_tag member.photo.url, class: "thumbnail" %></td>
-							<td><strong><%= member.name %></strong></td>
-							<td><strong><%= member.title %></strong></td>
-							<td><strong><%= member.sort %></strong></td>
-							<td>
-								<div class="btn-group">
-									<%= link_to edit_member_path(member) do %>
-										<button type="button" class="btn btn-default btn-sm">Edit</button>
-									<% end %>
-									<%= link_to member, method: :delete, data: { confirm: 'Are you sure?' } do %>
-										<button type="button" class="btn btn-default btn-sm">Delete</button>
-									<% end %>
-								</div>
-							</td>
+			<div class="table-responsive">
+				<table class="table table-striped">	
+						<tr>
+							<th>Photo</th>
+							<th>Name</th>
+							<th>Title</th>
+							<th>Sort</th>
+							<th></th>
 						</tr>
-					<% end %>
-				</tbody>
-			</table>
+					<tbody>
+						<% @members.each do |member| %>
+							<tr>
+								<td><%= image_tag member.photo.url, class: "thumbnail" %></td>
+								<td  style="padding-top:110px;"><strong><%= member.name %></strong></td>
+								<td  style="padding-top:110px;"><strong><%= member.title %></strong></td>
+								<td  style="padding-top:110px;"><strong><%= member.sort %></strong></td>
+								<td  style="padding-top:100px;">
+									<div class="btn-group well well-sm">
+										<%= link_to edit_member_path(member) do %>
+											<button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+										<% end %>
+										<%= link_to member, method: :delete, data: { confirm: 'Are you sure?' } do %>
+											<button type="button" class="btn btn-default btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Delete</button>
+										<% end %>
+									</div>
+								</td>
+							</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>
 		</div>
     </div>
     <div class="col-md-3">
