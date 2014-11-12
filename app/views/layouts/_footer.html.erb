@@ -1,0 +1,14 @@
+<footer class="footer">
+	<div class="container text-center">
+		<p>American College of Healthcare Executives Copyright &copy; 2014</p>
+		<% if admin_signed_in? %>
+			<div class="btn-group">
+				<%= link_to "Sort List", root_path, class: "btn btn-footer btn-sm" %>
+				<%= link_to "Member List", list_path, class: "btn btn-footer btn-sm" %>
+				<%= link_to "Log out", destroy_admin_session_path, method: :delete, class: "btn btn-footer btn-sm" %>
+			</div>
+		<% else %>
+				<%= link_to "Admin", list_path, class: "btn btn-footer btn-sm" %>
+		<% end %>
+	</div>
+</footer>

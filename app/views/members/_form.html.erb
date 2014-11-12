@@ -15,7 +15,6 @@
 			  </div>
 			<% end %>
 
-			<form role="form">
 				<div class="form-group">
 					<%= f.label :name %>
 					<%= f.text_field :name, placeholder: "Enter Full Name and Credentials", class: "form-control" %>
@@ -32,11 +31,11 @@
 						<div class="form-group pull-right">
 							<%= f.file_field :photo, class: "btn btn-default" %>
 						</div><br><br>
+				</div>		
 					<hr>
 				<div class="form-group">
 					<%= f.submit class: "btn btn-success" %> <%= link_to "Cancel", list_path, class: "btn btn-default btn-xs" %>
 				</div>
-			</form>
 		
 		<% end %>
 	</div>
