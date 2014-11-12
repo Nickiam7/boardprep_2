@@ -2,7 +2,7 @@
 
 This is the redesign of a study app to help co-workers learn the names of our new Board Members.
 
-Link to the app: [ACHE Board Members Prep App](http://www.ache.org/BoardMembers)
+Link to the app: [ACHE Board Members Prep App](http://#) [*old version*]
 
 Link to the American College of Healthcare Executives: [**ache.org**](http://www.ache.org)
 
