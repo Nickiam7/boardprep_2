@@ -28,10 +28,12 @@
 </script>	
 
 <%= render "layouts/sort_nav" %>
-<div class="container">
-	<%= render "layouts/shared/flash" %>
-	<%= yield %>
-</div>
+	<div class="container">
+					<%= render "layouts/shared/flash" %>
+		<div clas="row">
+			<%= yield %>
+		</div>
+	</div>
 <%= render "layouts/footer" %>
 
 </body>
