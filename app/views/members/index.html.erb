@@ -1,5 +1,5 @@
 <div id="container" class="text-center">
-	<div class="col-xs-6 col-md-12">
+	<div class="col-xs-12">
 		<% @members.each do |member| %>
 			<div class="mix <%= "#{member.sort}" %>" style="margin:10px; cursor:pointer;">
 				<%= image_tag member.photo.url, class: "poop img-rounded thumbnail darker", data: { toggle: "popover", placement: "top", content: "#{member.title}", title: "#{member.name}"} %>
