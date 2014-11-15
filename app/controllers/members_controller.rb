@@ -36,7 +36,7 @@ class MembersController < ApplicationController
 			redirect_to list_path
 			flash[:success] = "Member has been successully updated."
 		else
-			render 'update'
+			render 'edit'
 		end
 	end
 
