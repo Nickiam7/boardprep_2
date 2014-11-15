@@ -12,7 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'jquery-turbolinks'
 
 gem "paperclip", "~> 4.2"
-
+gem 'aws-sdk', '~> 1.58.0'
 
 gem 'devise'
 
