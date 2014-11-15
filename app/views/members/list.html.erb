@@ -2,23 +2,25 @@
 <div class="row">
 	<div class="col-md-9">
 		<div class="panel panel-default">
-			<div class="table-responsive">
-				<table class="table table-striped">	
+			<div id="better-tables">
+				<table class="table table-striped table-condensed cf">	
+					<thead class="cf">
 						<tr>
-							<th>Photo</th>
-							<th>Name</th>
-							<th>Title</th>
-							<th>Sort</th>
+							<th class="numeric">Photo</th>
+							<th data-title="Name">Name</th>
+							<th data-title="Title">Title</th>
+							<th data-title="Sort">Sort</th>
 							<th></th>
 						</tr>
+					</thead>
 					<tbody>
 						<% @members.each do |member| %>
 							<tr>
-								<td><%= image_tag member.photo.url, class: "thumbnail" %></td>
-								<td  style="padding-top:110px;"><strong><%= member.name %></strong></td>
-								<td  style="padding-top:110px;"><strong><%= member.title %></strong></td>
-								<td  style="padding-top:110px;"><strong><%= member.sort %></strong></td>
-								<td  style="padding-top:100px;">
+								<td style="padding-top:25px;"><%= image_tag member.photo.url, class: "thumbnail" %></td>
+								<td style="padding-top:25px;"><strong><%= member.name %></strong></td>
+								<td style="padding-top:25px;"><strong><%= member.title %></strong></td>
+								<td style="padding-top:25px;"><strong><%= member.sort %></strong></td>
+								<td style="padding-top:20px;">
 									<div class="btn-group well well-sm">
 										<%= link_to edit_member_path(member) do %>
 											<button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-edit"></span> Edit</button>

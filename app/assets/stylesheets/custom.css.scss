@@ -186,6 +186,50 @@ th {
     color: #2d3545;
 }
 
+/**  Better Tables **/
+
+@media (max-width: 768px) {
+
+	#better-tables table, 
+	#better-tables thead, 
+	#better-tables tbody, 
+	#better-tables th, 
+	#better-tables td, 
+	#better-tables tr { 
+		display: block; 
+	}
+ 
+	#better-tables thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+ 
+	#better-tables tr { border: 1px solid #ccc; }
+ 
+	#better-tables td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 10%; 
+		white-space: normal;
+		text-align:left;
+	}
+ 
+	#better-tables td:before { 
+		position: absolute;
+
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		text-align:left;
+		font-weight: bold;
+	}
+ 
+	#better-tables td:before { content: attr(data-title); }
+}
 
 
 
