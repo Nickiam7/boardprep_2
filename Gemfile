@@ -13,6 +13,7 @@ gem 'jquery-turbolinks'
 
 gem "paperclip", "~> 4.2"
 
+
 gem 'devise'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
@@ -20,7 +21,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'spring', group: :development
 
 gem 'sqlite3', group: :development
-
 
 group :production do
 	gem 'pg', '0.17.1'

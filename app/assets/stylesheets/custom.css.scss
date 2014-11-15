@@ -43,6 +43,12 @@ body {
 	margin: 15px 0;
 }
 
+.btn-dark .btn-dark-lilnav {
+	border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 0;
+}
 
 .btn-dark:focus, 
 .btn-dark.focus, 
@@ -52,6 +58,25 @@ body {
 	background-color: #0b0d12;
     border-color: #1c1f25;
     color: #fff;
+}
+
+.btn-group-vertical > .btn {
+	margin: 0;
+}
+
+.btn-group-vertical > .btn:last-child:not(:first-child) {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 0;
+
+}
+
+.btn-group-vertical > .btn:first-child:not(:last-child) {
+	border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 0;
 }
 
 .shuffle {
@@ -95,14 +120,22 @@ body {
     z-index:10;
 }
 
- #container .mix {
-	display: none;
+.lilnav {
+	position: absolute;
+	float: right;
+	right: 0;
 }
 
-#sorter.affix {
-    position: fixed;
-    top: 0;
-    width: 100%
+.lilnav.affix {
+	position: fixed;
+    top: 1155;
+    z-index:10;
+    float: right;
+    right: 0;
+}
+
+ #container .mix {
+	display: none;
 }
 
 .darker.desaturate {
@@ -126,7 +159,6 @@ th {
 
 .dropdown-menu {
 	border-radius: 0 0 2px 2px;
-	left: 0;
 	margin: 0;
 }
 
@@ -137,7 +169,7 @@ th {
 	border-top: 1px solid #010203;
 }
 
-footer p {
+.footer p {
 	color: #dddddd;
 }
 
@@ -153,6 +185,7 @@ footer p {
     border-color: #5cb85c;
     color: #2d3545;
 }
+
 
 
 

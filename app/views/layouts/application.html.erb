@@ -19,7 +19,7 @@
 		$(".tint").click(function () {
 		   $(".darker").toggleClass("desaturate");
 		  });
-		$('#sorter').affix({
+		$('#sorter, .lilnav').affix({
 		    offset: {
 		        top: 125
 		    }
@@ -27,14 +27,20 @@
 	});
 </script>	
 
+
 <%= render "layouts/sort_nav" %>
+<% if admin_signed_in? && !current_page?(root_path) %>
+	<%= render "layouts/liladmin" %>
+<% end %>
+
 	<div class="container">
-					<%= render "layouts/shared/flash" %>
 		<div clas="row">
+			<%= render "layouts/flash" %>
 			<%= yield %>
 		</div>
 	</div>
-<%= render "layouts/footer" %>
+	<%= render "layouts/footer" %>
 
 </body>
 </html>
+
