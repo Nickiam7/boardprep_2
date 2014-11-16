@@ -34,7 +34,7 @@ class MembersController < ApplicationController
 	def update
 		if @member.update(member_params)
 			redirect_to list_path
-			flash[:success] = "Member has been successully updated."
+			flash[:success] = "#{@member.name} has been successully updated."
 		else
 			render 'edit'
 		end
@@ -42,7 +42,7 @@ class MembersController < ApplicationController
 
 	def destroy
 		@member.destroy
-		redirect_to list_path
+		redirect_to list_url
 	end
 
 	private 

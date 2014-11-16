@@ -11,13 +11,13 @@ body {
 }
 
 .blue-head img {
-	margin: 30px 0px;
+	margin: 20px 0px;
 }
 
 .light-blue-header {
 	background: #2a66c0;
 	border: 1px solid #0e4598;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
 }
 
 .light-blue-header h1 {
@@ -128,7 +128,7 @@ body {
 
 .lilnav.affix {
 	position: fixed;
-    top: 1155;
+    bottom: 115;
     z-index:10;
     float: right;
     right: 0;
